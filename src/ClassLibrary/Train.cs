@@ -13,6 +13,13 @@ namespace ClassLibrary
     /// </summary>
     public class Train
     {
+
+        //Parte 2
+        private static int count = 0;
+
+
+        //parte 3 
+        private string identificador;
         /// <summary>
         /// Obtiene un valor que indica si las maquinas del tren han sido encendidas o no.
         /// </summary>
@@ -25,6 +32,38 @@ namespace ClassLibrary
         /// <returns>
         /// <c>true</c> si las máquinas pueden ser encendidas, <c>false</c> en caso contrario.
         /// </returns>
+        public Train(string identificador)
+        {
+            count += 1;
+            Console.WriteLine(count);
+        }
+
+
+        public string Identificador
+        {
+            get
+            {
+                return this.identificador;
+            }
+            set
+            {
+                this.identificador = value;
+            }
+        }
+        public static int Count
+        {
+            get
+            {
+                return count;
+            }
+            set
+            {
+                count = value;
+            }
+        }
+
+
+
         public bool StartEngines()
         {
             if (this.IsEngineStarted)
